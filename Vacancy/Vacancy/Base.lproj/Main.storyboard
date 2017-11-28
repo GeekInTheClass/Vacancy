@@ -273,7 +273,7 @@
                                     <outlet property="storeAddress" destination="LU4-0R-NPK" id="QJk-01-M3t"/>
                                     <outlet property="storeCapacity" destination="Kvm-fN-jNK" id="0bF-QT-mKk"/>
                                     <outlet property="storeName" destination="Hhb-n9-5gU" id="fpo-Rc-t1Y"/>
-                                    <segue destination="5Ys-qb-FX3" kind="popoverPresentation" identifier="ReservationPopupSegue" popoverAnchorView="XxY-Wa-Faa" id="ucF-wt-gas">
+                                    <segue destination="5Ys-qb-FX3" kind="popoverPresentation" identifier="ReservePopupSegue" popoverAnchorView="XxY-Wa-Faa" id="Gmb-bA-1OV">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -347,7 +347,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="WlW-jY-g7f" kind="relationship" relationship="rootViewController" id="e1a-js-2ie"/>
-                        <segue destination="eoK-3l-Ec2" kind="show" id="XUS-EM-R5O"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TQT-3g-bdy" userLabel="First Responder" sceneMemberID="firstResponder"/>

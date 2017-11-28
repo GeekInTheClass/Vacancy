@@ -12,7 +12,7 @@ import UIKit
 
 class ReservePopupViewController: UIViewController {
     
-    var takeStore:Store
+    var takeStore:Store? = nil
     
     
     override func viewDidLoad() {
