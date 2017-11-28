@@ -273,9 +273,7 @@
                                     <outlet property="storeAddress" destination="LU4-0R-NPK" id="QJk-01-M3t"/>
                                     <outlet property="storeCapacity" destination="Kvm-fN-jNK" id="0bF-QT-mKk"/>
                                     <outlet property="storeName" destination="Hhb-n9-5gU" id="fpo-Rc-t1Y"/>
-                                    <segue destination="5Ys-qb-FX3" kind="popoverPresentation" identifier="ReservePopupSegue" popoverAnchorView="XxY-Wa-Faa" id="Gmb-bA-1OV">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="5Ys-qb-FX3" kind="presentation" identifier="ReservePopupSegue" id="ANx-5N-m9i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
