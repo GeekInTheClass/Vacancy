@@ -4,105 +4,43 @@
 @import 'libs/skel';
 
 /*
-	Forty by HTML5 UP
+	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Spotlights */
+/* Basic */
 
-	.spotlights {
-		> section {
-			&:after {
-				content: '';
-				display: block;
-				clear: both;
-			}
+	body {
+		background-color:		_palette(bg);
+		background-image:		url('../../images/bg.jpg');
+		background-size:		cover;
+		background-attachment:	fixed;
+		background-position:	center;
 
-			> .image {
-				float: left;
-			}
-
-			> .content {
-				float: left;
-			}
-		}
-	}
-
-/* Tiles */
-
-	.tiles {
-		&:after {
+		&:before {
+			background: transparentize(_palette(bg), 0.2);
 			content: '';
 			display: block;
-			clear: both;
-		}
-
-		article {
-			@include padding(8em, 4em);
-			float: left;
-			height: auto;
-			max-height: none;
-			min-height: 0;
-		}
-	}
-
-/* Header */
-
-	#header {
-		.logo {
-			position: absolute;
-			top: 0;
+			height: 100%;
 			left: 0;
-		}
-
-		nav {
-			position: absolute;
+			position: fixed;
 			top: 0;
-			right: 0;
+			width: 100%;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
 		}
 	}
 
-/* Banner */
+/* Features */
 
-	#banner {
-		@include padding(6em, 0, (1em, 0, 0, 0));
-		background-attachment: scroll;
-		height: auto;
-		max-height: none;
-		min-height: 0;
-
-		> .inner {
-			.content {
-				display: block;
-
-				> * {
-					margin-left: 0;
-					margin: 0 0 _size(element-margin) 0;
-				}
-			}
-		}
-
-		&.major {
-			height: auto;
-			max-height: none;
-			min-height: 0;
-		}
-	}
-
-/* Contact */
-
-	#contact {
-		&:after {
-			content: '';
-			display: block;
-			clear: both;
-		}
-
-		> .inner {
-			> * {
-				float: left;
-			}
+	.features {
+		article {
+			display: inline-block;
+			width: 45%;
 		}
 	}
 
@@ -110,6 +48,59 @@
 
 	#menu {
 		.inner {
-			margin: 0 auto;
+			margin: 4em auto;
+		}
+	}
+
+/* Wrapper */
+
+	#wrapper {
+		> header {
+			background: none !important;
+		}
+	}
+
+	.wrapper {
+		&.spotlight {
+			.inner {
+				text-align: left !important;
+			}
+
+			.image {
+				display: inline-block;
+				margin: 0 _size(section-spacing, large) _size(element-margin) 0 !important;
+				vertical-align: middle;
+				width: 24%;
+			}
+
+			.content {
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+			}
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		background: none !important;
+	}
+
+/* Footer */
+
+	#footer {
+		background: none !important;
+
+		.inner {
+			form {
+				display: inline-block;
+				width: 45%;
+			}
+
+			.contact {
+				display: inline-block;
+				width: 45%;
+			}
 		}
 	}

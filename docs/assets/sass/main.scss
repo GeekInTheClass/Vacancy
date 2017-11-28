@@ -3,10 +3,10 @@
 @import 'libs/mixins';
 @import 'libs/skel';
 @import 'font-awesome.min.css';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic');
 
 /*
-	Forty by HTML5 UP
+	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -16,37 +16,20 @@
 		large: '(max-width: 1280px)',
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
+		xsmall: '(max-width: 640px)',
 		xxsmall: '(max-width: 360px)'
 	));
 
 	@include skel-layout((
 		reset: 'full',
 		boxModel: 'border',
-		grid: ( gutters: 2em ),
+		grid: ( gutters: 1.75em ),
 		breakpoints: (
-			large: (
-				grid: ( gutters: 1.5em )
-			),
 			small: (
 				grid: ( gutters: 1.25em )
 			)
 		)
 	));
-
-	@mixin inner {
-		> .inner {
-			@include padding(4em, 0);
-			margin: 0 auto;
-			max-width: _size(inner);
-			width: calc(100% - 6em);
-
-			@include breakpoint(small) {
-				@include padding(3em, 0);
-				width: calc(100% - 3em);
-			}
-		}
-	}
 
 // Base.
 
@@ -63,16 +46,12 @@
 	@import 'components/list';
 	@import 'components/table';
 	@import 'components/button';
-	@import 'components/tiles';
-	@import 'components/contact-method';
-	@import 'components/spotlights';
+	@import 'components/features';
 
 // Layout.
 
 	@import 'layout/header';
-	@import 'layout/banner';
-	@import 'layout/main';
-	@import 'layout/contact';
-	@import 'layout/footer';
-	@import 'layout/wrapper';
 	@import 'layout/menu';
+	@import 'layout/banner';
+	@import 'layout/wrapper';
+	@import 'layout/footer';
