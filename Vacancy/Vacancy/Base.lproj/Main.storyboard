@@ -203,6 +203,32 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="0.44977511244377816"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="GcK-ze-pTW">
+            <objects>
+                <tableViewController id="KUP-tM-HAo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="qBd-rT-OUX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSV-JX-JZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="-815"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eRn-FB-mUf">
+            <objects>
+                <navigationController id="4CK-ud-EfG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sOI-cZ-jmE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KUP-tM-HAo" kind="relationship" relationship="rootViewController" id="c4k-CR-Fk6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psa-34-55P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-815"/>
+        </scene>
         <!--Store View Controller-->
         <scene sceneID="OhI-jb-zc8">
             <objects>
@@ -247,7 +273,7 @@
                                     <outlet property="storeAddress" destination="LU4-0R-NPK" id="QJk-01-M3t"/>
                                     <outlet property="storeCapacity" destination="Kvm-fN-jNK" id="0bF-QT-mKk"/>
                                     <outlet property="storeName" destination="Hhb-n9-5gU" id="fpo-Rc-t1Y"/>
-                                    <segue destination="UwV-D7-qnM" kind="popoverPresentation" popoverAnchorView="XxY-Wa-Faa" id="ZlO-RS-EJX">
+                                    <segue destination="5Ys-qb-FX3" kind="popoverPresentation" identifier="ReservationPopupSegue" popoverAnchorView="XxY-Wa-Faa" id="ucF-wt-gas">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -263,19 +289,6 @@
             </objects>
             <point key="canvasLocation" x="784.79999999999995" y="0.44977511244377816"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="GAU-BH-zLi">
-            <objects>
-                <navigationController id="UwV-D7-qnM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ecr-Wd-y2d">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zaN-tL-q3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1478" y="-625"/>
-        </scene>
         <!--Reserve Popup View Controller-->
         <scene sceneID="gnE-ja-eNC">
             <objects>
@@ -284,9 +297,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-Qn-2nZ" userLabel="Popup View">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-Qn-2nZ" userLabel="Popup View">
                                 <rect key="frame" x="52" y="100" width="270" height="625"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-wX-B3F">
                                         <rect key="frame" x="32" y="417" width="207" height="69"/>
@@ -314,6 +326,10 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FNB-Qn-2nZ" firstAttribute="centerX" secondItem="tXR-sm-TZi" secondAttribute="centerX" id="Ui8-Nf-ZNB"/>
+                            <constraint firstItem="FNB-Qn-2nZ" firstAttribute="centerY" secondItem="tXR-sm-TZi" secondAttribute="centerY" id="Wkh-9o-9BE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Vd-nU-pqf"/>
                     </view>
                 </viewController>

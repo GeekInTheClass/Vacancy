@@ -11,10 +11,8 @@ import UIKit
 
 
 class ReservePopupViewController: UIViewController {
-
-
-    var popupController:CNPPopupController?
-
+    
+    var takeStore:Store
     
     
     override func viewDidLoad() {
@@ -26,6 +24,9 @@ class ReservePopupViewController: UIViewController {
         circle.layer.cornerRadius = 50
         circle.backgroundColor = UIColor.green
         circle.clipsToBounds = true
+        
+        
+        
         
         
     
@@ -43,8 +44,8 @@ class ReservePopupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func 
+ 
+
 
     /*
     // MARK: - Navigation

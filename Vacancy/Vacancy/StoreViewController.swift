@@ -110,14 +110,17 @@ class StoreViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ReservationPopupSegue" {
+            guard let destination = segue.destination as? ReservePopupViewController, let selectedIndex = self.tableView.indexPathForSelectedRow?.row, let takeStore = currentlocation?.stores?[selectedIndex] else {
+                return
+            }
+            destination.takeStore = takeStore
+        }
     }
-    */
 
 }
