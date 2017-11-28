@@ -14,16 +14,26 @@ class ReservePopupViewController: UIViewController {
     
     var takeStore:Store? = nil
     
+    @IBOutlet weak var storeName: UILabel!
+    
+    @IBOutlet weak var goReserve: UIButton!
     
     override func viewDidLoad() {
         
 
-        let circle = UIView(frame: CGRect(x: 200.0, y:500.0, width: 100.0, height: 100.0))
+        let circle = UIView(frame: CGRect(x: 200.0, y:300.0, width: 50, height: 50))
         
         circle.center = self.view.center
         circle.layer.cornerRadius = 50
         circle.backgroundColor = UIColor.green
         circle.clipsToBounds = true
+        
+        storeName.text = takeStore?.name
+        
+        
+        
+        goReserve.layer.cornerRadius = 5
+        goReserve.clipsToBounds = true
         
         
         
@@ -45,7 +55,12 @@ class ReservePopupViewController: UIViewController {
     }
     
  
-
+    
+    
+    
+    
+    
+    
 
     /*
     // MARK: - Navigation

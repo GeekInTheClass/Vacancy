@@ -273,7 +273,7 @@
                                     <outlet property="storeAddress" destination="LU4-0R-NPK" id="QJk-01-M3t"/>
                                     <outlet property="storeCapacity" destination="Kvm-fN-jNK" id="0bF-QT-mKk"/>
                                     <outlet property="storeName" destination="Hhb-n9-5gU" id="fpo-Rc-t1Y"/>
-                                    <segue destination="5Ys-qb-FX3" kind="presentation" identifier="ReservePopupSegue" id="ANx-5N-m9i"/>
+                                    <segue destination="5Ys-qb-FX3" kind="presentation" identifier="ReservationPopupSegue" id="ANx-5N-m9i"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -295,8 +295,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-Qn-2nZ" userLabel="Popup View">
-                                <rect key="frame" x="52" y="100" width="270" height="625"/>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-Qn-2nZ" userLabel="Popup View">
+                                <rect key="frame" x="52" y="100" width="270" height="612"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-wX-B3F">
                                         <rect key="frame" x="32" y="417" width="207" height="69"/>
@@ -312,8 +312,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WF-cy-mP0">
-                                        <rect key="frame" x="114" y="88" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WF-cy-mP0">
+                                        <rect key="frame" x="8" y="156" width="254" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -325,15 +325,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FNB-Qn-2nZ" firstAttribute="top" secondItem="6Vd-nU-pqf" secondAttribute="top" constant="56" id="59j-DS-BC9"/>
                             <constraint firstItem="FNB-Qn-2nZ" firstAttribute="centerX" secondItem="tXR-sm-TZi" secondAttribute="centerX" id="Ui8-Nf-ZNB"/>
                             <constraint firstItem="FNB-Qn-2nZ" firstAttribute="centerY" secondItem="tXR-sm-TZi" secondAttribute="centerY" id="Wkh-9o-9BE"/>
+                            <constraint firstItem="FNB-Qn-2nZ" firstAttribute="leading" secondItem="6Vd-nU-pqf" secondAttribute="leading" constant="52" id="gIs-0O-lsQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Vd-nU-pqf"/>
                     </view>
+                    <connections>
+                        <outlet property="goReserve" destination="XrF-wX-B3F" id="FkK-3f-juj"/>
+                        <outlet property="storeName" destination="3WF-cy-mP0" id="B0e-X0-EKj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gI4-fI-Hqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="1"/>
+            <point key="canvasLocation" x="2144.8000000000002" y="0.73891625615763545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1Y1-eO-Xxo">
