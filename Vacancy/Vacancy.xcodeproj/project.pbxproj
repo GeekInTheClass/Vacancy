@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CD001BED1FBA7D2A0042D020 /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD001BEC1FBA7D2A0042D020 /* LocationCollectionViewCell.swift */; };
+		CD241EDD1FD3D1B8007C0C40 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241ED61FD3D1B8007C0C40 /* BEMAnimationManager.m */; };
+		CD241EDE1FD3D1B8007C0C40 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241ED81FD3D1B8007C0C40 /* BEMCheckBox.m */; };
+		CD241EDF1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241EDA1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m */; };
+		CD241EE01FD3D1B8007C0C40 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241EDC1FD3D1B8007C0C40 /* BEMPathManager.m */; };
+		CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */; };
 		CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884981FB566D300BF6146 /* AppDelegate.swift */; };
 		CD28849B1FB566D300BF6146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD28849A1FB566D300BF6146 /* ViewController.swift */; };
 		CD28849E1FB566D300BF6146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD28849C1FB566D300BF6146 /* Main.storyboard */; };
@@ -23,6 +28,16 @@
 
 /* Begin PBXFileReference section */
 		CD001BEC1FBA7D2A0042D020 /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD241ED51FD3D1B8007C0C40 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		CD241ED61FD3D1B8007C0C40 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		CD241ED71FD3D1B8007C0C40 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		CD241ED81FD3D1B8007C0C40 /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		CD241ED91FD3D1B8007C0C40 /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		CD241EDA1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		CD241EDB1FD3D1B8007C0C40 /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		CD241EDC1FD3D1B8007C0C40 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
+		CD241EE11FD3D201007C0C40 /* Reserve_checkbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reserve_checkbox.h; sourceTree = "<group>"; };
+		CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedViewController.swift; sourceTree = "<group>"; };
 		CD2884951FB566D300BF6146 /* Vacancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vacancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2884981FB566D300BF6146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD28849A1FB566D300BF6146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +64,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD241ED41FD3D1B8007C0C40 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CD241ED51FD3D1B8007C0C40 /* BEMAnimationManager.h */,
+				CD241ED61FD3D1B8007C0C40 /* BEMAnimationManager.m */,
+				CD241ED71FD3D1B8007C0C40 /* BEMCheckBox.h */,
+				CD241ED81FD3D1B8007C0C40 /* BEMCheckBox.m */,
+				CD241ED91FD3D1B8007C0C40 /* BEMCheckBoxGroup.h */,
+				CD241EDA1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m */,
+				CD241EDB1FD3D1B8007C0C40 /* BEMPathManager.h */,
+				CD241EDC1FD3D1B8007C0C40 /* BEMPathManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		CD28848C1FB566D300BF6146 = {
 			isa = PBXGroup;
 			children = (
@@ -68,13 +98,16 @@
 		CD2884971FB566D300BF6146 /* Vacancy */ = {
 			isa = PBXGroup;
 			children = (
+				CD241ED41FD3D1B8007C0C40 /* Classes */,
 				CD2884B21FB5888100BF6146 /* LocationCollectionViewController.swift */,
 				CD2884B41FB58A9A00BF6146 /* StoreViewController.swift */,
 				CD2884AE1FB575E000BF6146 /* MainViewController.swift */,
 				CD2884981FB566D300BF6146 /* AppDelegate.swift */,
 				CD28849A1FB566D300BF6146 /* ViewController.swift */,
 				CD28849C1FB566D300BF6146 /* Main.storyboard */,
+				CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */,
 				CD2EFEFF1FC299A50049759E /* ReservePopupViewController.swift */,
+				CD241EE11FD3D201007C0C40 /* Reserve_checkbox.h */,
 				CD7F6C071FC188D50022100B /* StoreViewCell.swift */,
 				CD001BEC1FBA7D2A0042D020 /* LocationCollectionViewCell.swift */,
 				CD2884AA1FB566ED00BF6146 /* File.swift */,
@@ -158,12 +191,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD28849B1FB566D300BF6146 /* ViewController.swift in Sources */,
+				CD241EDD1FD3D1B8007C0C40 /* BEMAnimationManager.m in Sources */,
+				CD241EE01FD3D1B8007C0C40 /* BEMPathManager.m in Sources */,
 				CD2884B51FB58A9A00BF6146 /* StoreViewController.swift in Sources */,
 				CD7F6C061FC16D9C0022100B /* File.swift in Sources */,
+				CD241EDE1FD3D1B8007C0C40 /* BEMCheckBox.m in Sources */,
+				CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */,
 				CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */,
 				CD2884B31FB5888100BF6146 /* LocationCollectionViewController.swift in Sources */,
 				CD001BED1FBA7D2A0042D020 /* LocationCollectionViewCell.swift in Sources */,
 				CD7F6C081FC188D50022100B /* StoreViewCell.swift in Sources */,
+				CD241EDF1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m in Sources */,
 				CD2EFF001FC299A50049759E /* ReservePopupViewController.swift in Sources */,
 				CD2884AF1FB575E000BF6146 /* MainViewController.swift in Sources */,
 			);
@@ -307,6 +345,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Segaon-PC.Vacancy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Vacancy/Reserve_checkbox.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +360,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Segaon-PC.Vacancy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Vacancy/Reserve_checkbox.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
