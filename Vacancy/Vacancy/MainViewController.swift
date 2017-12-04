@@ -11,11 +11,22 @@ import UIKit
 class MainViewController: UITableViewController {
 
     
+    
     @IBOutlet weak var goSearch: UIButton!
     @IBOutlet weak var goList: UIButton!
     
+    
+    private var mainView: MainView_New
+    
+ 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         goSearch.layer.cornerRadius = 5
         goSearch.clipsToBounds = true

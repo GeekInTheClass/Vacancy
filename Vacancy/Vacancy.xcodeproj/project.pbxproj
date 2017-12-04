@@ -13,12 +13,13 @@
 		CD241EDF1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241EDA1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m */; };
 		CD241EE01FD3D1B8007C0C40 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241EDC1FD3D1B8007C0C40 /* BEMPathManager.m */; };
 		CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */; };
+		CD241EE91FD4D742007C0C40 /* MainView_New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EE81FD4D742007C0C40 /* MainView_New.swift */; };
+		CD241EEB1FD4DD34007C0C40 /* MainUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EEA1FD4DD34007C0C40 /* MainUIViewController.swift */; };
 		CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884981FB566D300BF6146 /* AppDelegate.swift */; };
 		CD28849B1FB566D300BF6146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD28849A1FB566D300BF6146 /* ViewController.swift */; };
 		CD28849E1FB566D300BF6146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD28849C1FB566D300BF6146 /* Main.storyboard */; };
 		CD2884A01FB566D300BF6146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD28849F1FB566D300BF6146 /* Assets.xcassets */; };
 		CD2884A31FB566D300BF6146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2884A11FB566D300BF6146 /* LaunchScreen.storyboard */; };
-		CD2884AF1FB575E000BF6146 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884AE1FB575E000BF6146 /* MainViewController.swift */; };
 		CD2884B31FB5888100BF6146 /* LocationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884B21FB5888100BF6146 /* LocationCollectionViewController.swift */; };
 		CD2884B51FB58A9A00BF6146 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884B41FB58A9A00BF6146 /* StoreViewController.swift */; };
 		CD2EFF001FC299A50049759E /* ReservePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2EFEFF1FC299A50049759E /* ReservePopupViewController.swift */; };
@@ -38,6 +39,8 @@
 		CD241EDC1FD3D1B8007C0C40 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
 		CD241EE11FD3D201007C0C40 /* Reserve_checkbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reserve_checkbox.h; sourceTree = "<group>"; };
 		CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedViewController.swift; sourceTree = "<group>"; };
+		CD241EE81FD4D742007C0C40 /* MainView_New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_New.swift; sourceTree = "<group>"; };
+		CD241EEA1FD4DD34007C0C40 /* MainUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIViewController.swift; sourceTree = "<group>"; };
 		CD2884951FB566D300BF6146 /* Vacancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vacancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2884981FB566D300BF6146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD28849A1FB566D300BF6146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		CD2884A21FB566D300BF6146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD2884A41FB566D300BF6146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD2884AA1FB566ED00BF6146 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		CD2884AE1FB575E000BF6146 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD2884B21FB5888100BF6146 /* LocationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationCollectionViewController.swift; path = ../LocationCollectionViewController.swift; sourceTree = "<group>"; };
 		CD2884B41FB58A9A00BF6146 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		CD2EFEFF1FC299A50049759E /* ReservePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservePopupViewController.swift; sourceTree = "<group>"; };
@@ -101,10 +103,11 @@
 				CD241ED41FD3D1B8007C0C40 /* Classes */,
 				CD2884B21FB5888100BF6146 /* LocationCollectionViewController.swift */,
 				CD2884B41FB58A9A00BF6146 /* StoreViewController.swift */,
-				CD2884AE1FB575E000BF6146 /* MainViewController.swift */,
+				CD241EE81FD4D742007C0C40 /* MainView_New.swift */,
 				CD2884981FB566D300BF6146 /* AppDelegate.swift */,
 				CD28849A1FB566D300BF6146 /* ViewController.swift */,
 				CD28849C1FB566D300BF6146 /* Main.storyboard */,
+				CD241EEA1FD4DD34007C0C40 /* MainUIViewController.swift */,
 				CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */,
 				CD2EFEFF1FC299A50049759E /* ReservePopupViewController.swift */,
 				CD241EE11FD3D201007C0C40 /* Reserve_checkbox.h */,
@@ -197,13 +200,14 @@
 				CD7F6C061FC16D9C0022100B /* File.swift in Sources */,
 				CD241EDE1FD3D1B8007C0C40 /* BEMCheckBox.m in Sources */,
 				CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */,
+				CD241EEB1FD4DD34007C0C40 /* MainUIViewController.swift in Sources */,
 				CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */,
 				CD2884B31FB5888100BF6146 /* LocationCollectionViewController.swift in Sources */,
+				CD241EE91FD4D742007C0C40 /* MainView_New.swift in Sources */,
 				CD001BED1FBA7D2A0042D020 /* LocationCollectionViewCell.swift in Sources */,
 				CD7F6C081FC188D50022100B /* StoreViewCell.swift in Sources */,
 				CD241EDF1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m in Sources */,
 				CD2EFF001FC299A50049759E /* ReservePopupViewController.swift in Sources */,
-				CD2884AF1FB575E000BF6146 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
