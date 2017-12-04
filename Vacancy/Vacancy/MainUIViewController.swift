@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension MainUIViewController: MainViewDelegate {
+    func ListButtonWasClicked(mainView: MainView_New, sender: UIButton!) {
+        performSegue(withIdentifier: "locationSegue", sender: sender)
+    }
+    
+}
 
 
 class MainUIViewController: UIViewController {
@@ -19,6 +25,9 @@ class MainUIViewController: UIViewController {
     
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +35,8 @@ class MainUIViewController: UIViewController {
         
         mainView = MainView_New.newAutoLayout()
         view.addSubview(mainView)
+        
+        
 
         // Do any additional setup after loading the view.
     }

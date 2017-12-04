@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol MainViewDelegate: class {
+    func ListButtonWasClicked(mainView: MainView_New, sender: UIButton!)
+}
+
 class MainView_New: UIView {
+    
     
     
     
     private var searchBar: UISearchBar!
     private var resultTable: UITableView!
     private var searchButton: UIButton!
+    private var listButton: UIButton!
     
     private let searchButtonHeight: CGFloat = 50
     private let searchButtonWidth: CGFloat = 230
@@ -38,6 +44,8 @@ class MainView_New: UIView {
     private var searchButtonEdgeConstraint: NSLayoutConstraint?
     
     
+    weak var delegate: MainViewDelegate?
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -49,6 +57,14 @@ class MainView_New: UIView {
         setupViews()
     }
     
+    init(searchBarDelegate: UISearchBarDelegate, tableViewDataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate, cellIdentifier: String) {
+        super.init(frame: CGRect.zero)
+        setupViews()
+        searchBar.delegate = searchBarDelegate
+        resultTable.dataSource = tableViewDataSource
+        resultTable.delegate = tableViewDelegate
+        resultTable.register(StoreViewCell.self, forCellReuseIdentifier: "storeCell")
+    }
     
     //Mark  - initialization
     
@@ -79,14 +95,23 @@ class MainView_New: UIView {
         
     }
     
+    func setupListButton() {
+        listButton = UIButton(type: .custom)
+        listButton.translatesAutoresizingMaskIntoConstraints = false
+        listButton.addTarget(self, action: #selector(listClicked(_:)), for: .touchUpInside)
+        listButton.setTitle("리스트에서 찾기", for: UIControlState.normal)
+        listButton.layer.cornerRadius = searchButtonStartingCornerRadius
+        
+        addSubview(listButton)
+    }
+    
+    
     func setupResultTable() {
         resultTable = UITableView.newAutoLayout()
         resultTable.alpha = tableStartingAlpha
         addSubview(resultTable)
     }
-    /*
     
-    */
     // -Mark: Layout
     
     override func updateConstraints() {
@@ -97,6 +122,8 @@ class MainView_New: UIView {
             
             searchButton.autoSetDimension(.height, toSize: searchButtonHeight)
             searchButton.autoAlignAxis(toSuperviewAxis: .vertical)
+            
+            
             
             
             resultTable.autoAlignAxis(toSuperviewAxis: .vertical)
@@ -126,6 +153,10 @@ class MainView_New: UIView {
     
     @objc func searchClicked(_ sender: UIButton!) {
         showSearchBar(searchBar: searchBar)
+    }
+    
+    @objc func listClicked(_ sender: UIButton!) {
+        delegate?.ListButtonWasClicked(mainView: self, sender:sender)
     }
     
     
