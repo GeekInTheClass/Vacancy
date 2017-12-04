@@ -8,12 +8,15 @@
 
 import UIKit
 
+
+
 class MainUIViewController: UIViewController {
     
-    //var mainView:MainView_New
+    private var mainView:MainView_New!
+    private var didSetupConstraints = false
 
     
-    @IBOutlet weak var goList: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -21,9 +24,8 @@ class MainUIViewController: UIViewController {
         
         
         
-        
-        goList.layer.cornerRadius = 5
-        goList.clipsToBounds = true
+        mainView = MainView_New.newAutoLayout()
+        view.addSubview(mainView)
 
         // Do any additional setup after loading the view.
     }
@@ -33,6 +35,21 @@ class MainUIViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func updateViewConstraints() {
+        if !didSetupConstraints {
+            
+            mainView.autoPin(toTopLayoutGuideOf: self, withInset: 0)
+            mainView.autoPin(toBottomLayoutGuideOf: self, withInset: 0)
+            mainView.autoPinEdge(toSuperviewEdge: .leading)
+            mainView.autoPinEdge(toSuperviewEdge: .trailing)
+            
+            
+            didSetupConstraints = true
+        }
+        super.updateViewConstraints()
+    }
+    
+ 
 
     /*
     // MARK: - Navigation
@@ -42,6 +59,8 @@ class MainUIViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ */
+ 
 
 }
+

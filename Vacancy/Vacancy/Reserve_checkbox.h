@@ -7,3 +7,5 @@
 //
 
 #import "BEMCheckBox.h"
+#import "PureLayout.h"
+#import <UIKit/UIView.h>

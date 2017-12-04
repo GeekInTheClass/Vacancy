@@ -15,6 +15,9 @@
 		CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */; };
 		CD241EE91FD4D742007C0C40 /* MainView_New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EE81FD4D742007C0C40 /* MainView_New.swift */; };
 		CD241EEB1FD4DD34007C0C40 /* MainUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD241EEA1FD4DD34007C0C40 /* MainUIViewController.swift */; };
+		CD241F0F1FD4EA0E007C0C40 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241F071FD4EA0E007C0C40 /* ALView+PureLayout.m */; };
+		CD241F101FD4EA0E007C0C40 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241F091FD4EA0E007C0C40 /* NSArray+PureLayout.m */; };
+		CD241F111FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CD241F0B1FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.m */; };
 		CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2884981FB566D300BF6146 /* AppDelegate.swift */; };
 		CD28849B1FB566D300BF6146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD28849A1FB566D300BF6146 /* ViewController.swift */; };
 		CD28849E1FB566D300BF6146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD28849C1FB566D300BF6146 /* Main.storyboard */; };
@@ -41,6 +44,15 @@
 		CD241EE21FD3DD3E007C0C40 /* ReservedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedViewController.swift; sourceTree = "<group>"; };
 		CD241EE81FD4D742007C0C40 /* MainView_New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_New.swift; sourceTree = "<group>"; };
 		CD241EEA1FD4DD34007C0C40 /* MainUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIViewController.swift; sourceTree = "<group>"; };
+		CD241F061FD4EA0E007C0C40 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		CD241F071FD4EA0E007C0C40 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		CD241F081FD4EA0E007C0C40 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		CD241F091FD4EA0E007C0C40 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		CD241F0A1FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		CD241F0B1FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		CD241F0C1FD4EA0E007C0C40 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		CD241F0D1FD4EA0E007C0C40 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		CD241F0E1FD4EA0E007C0C40 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		CD2884951FB566D300BF6146 /* Vacancy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vacancy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2884981FB566D300BF6146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD28849A1FB566D300BF6146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +93,22 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		CD241F051FD4EA0E007C0C40 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				CD241F061FD4EA0E007C0C40 /* ALView+PureLayout.h */,
+				CD241F071FD4EA0E007C0C40 /* ALView+PureLayout.m */,
+				CD241F081FD4EA0E007C0C40 /* NSArray+PureLayout.h */,
+				CD241F091FD4EA0E007C0C40 /* NSArray+PureLayout.m */,
+				CD241F0A1FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.h */,
+				CD241F0B1FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.m */,
+				CD241F0C1FD4EA0E007C0C40 /* PureLayout+Internal.h */,
+				CD241F0D1FD4EA0E007C0C40 /* PureLayout.h */,
+				CD241F0E1FD4EA0E007C0C40 /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		CD28848C1FB566D300BF6146 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +128,7 @@
 		CD2884971FB566D300BF6146 /* Vacancy */ = {
 			isa = PBXGroup;
 			children = (
+				CD241F051FD4EA0E007C0C40 /* PureLayout */,
 				CD241ED41FD3D1B8007C0C40 /* Classes */,
 				CD2884B21FB5888100BF6146 /* LocationCollectionViewController.swift */,
 				CD2884B41FB58A9A00BF6146 /* StoreViewController.swift */,
@@ -198,12 +227,15 @@
 				CD241EE01FD3D1B8007C0C40 /* BEMPathManager.m in Sources */,
 				CD2884B51FB58A9A00BF6146 /* StoreViewController.swift in Sources */,
 				CD7F6C061FC16D9C0022100B /* File.swift in Sources */,
+				CD241F111FD4EA0E007C0C40 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				CD241EDE1FD3D1B8007C0C40 /* BEMCheckBox.m in Sources */,
 				CD241EE31FD3DD3E007C0C40 /* ReservedViewController.swift in Sources */,
+				CD241F101FD4EA0E007C0C40 /* NSArray+PureLayout.m in Sources */,
 				CD241EEB1FD4DD34007C0C40 /* MainUIViewController.swift in Sources */,
 				CD2884991FB566D300BF6146 /* AppDelegate.swift in Sources */,
 				CD2884B31FB5888100BF6146 /* LocationCollectionViewController.swift in Sources */,
 				CD241EE91FD4D742007C0C40 /* MainView_New.swift in Sources */,
+				CD241F0F1FD4EA0E007C0C40 /* ALView+PureLayout.m in Sources */,
 				CD001BED1FBA7D2A0042D020 /* LocationCollectionViewCell.swift in Sources */,
 				CD7F6C081FC188D50022100B /* StoreViewCell.swift in Sources */,
 				CD241EDF1FD3D1B8007C0C40 /* BEMCheckBoxGroup.m in Sources */,

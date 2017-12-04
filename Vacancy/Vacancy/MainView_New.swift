@@ -11,19 +11,31 @@ import UIKit
 class MainView_New: UIView {
     
     
+    
     private var searchBar: UISearchBar!
     private var resultTable: UITableView!
-    @IBOutlet weak var searchButton: UIButton!
+    private var searchButton: UIButton!
+    
+    private let searchButtonHeight: CGFloat = 50
+    private let searchButtonWidth: CGFloat = 230
     
     
-    private let goSearchStartingAlpha: CGFloat = 1
-    private let goSearchEndingAlpha: CGFloat = 0
+    private let searchButtonStartingAlpha: CGFloat = 1
     private let searchButtonEndingAlpha: CGFloat = 0
     
     private let searchBarStartingAlpha: CGFloat = 0
-    private let tableStartingAlpha: CGFloat = 0
     private let searchBarEndingAlpha: CGFloat = 1
+    private let tableStartingAlpha: CGFloat = 0
     private let tableEndingAlpha: CGFloat = 1
+    
+    
+    private let searchButtonStartingCornerRadius: CGFloat = 5
+    private let searchButtonEndingCornerRadius: CGFloat = 0
+    
+    private var didSetupConstraints = false
+    
+    private var searchButtonWidthConstraint: NSLayoutConstraint?
+    private var searchButtonEdgeConstraint: NSLayoutConstraint?
     
     
     
@@ -38,33 +50,85 @@ class MainView_New: UIView {
     }
     
     
+    //Mark  - initialization
+    
     func setupViews() {
+        setupSearchButton()
         setupSearchBar()
         setupResultTable()
+        //setupGoListButton()
     }
     
     func setupSearchBar() {
+        searchBar = UISearchBar.newAutoLayout()
         searchBar.showsCancelButton = true
         searchBar.alpha = searchBarStartingAlpha
+        searchBar.delegate = self
         addSubview(searchBar)
+        
     }
     
     func setupSearchButton() {
-        searchButton.addTarget(self, action: Selector(("searchClicked")), for: .touchUpInside)
-        searchButton.setTitle("Search", for: UIControlState.normal)
-        searchButton.layer.cornerRadius = 5
+        searchButton = UIButton(type: .custom)
+        searchButton.translatesAutoresizingMaskIntoConstraints = false
+        searchButton.addTarget(self, action: #selector(searchClicked(_:)), for: .touchUpInside)
+        searchButton.setTitle("이름으로 찾기", for: UIControlState.normal)
+        searchButton.backgroundColor = UIColor.lightGray
+        searchButton.layer.cornerRadius = searchButtonStartingCornerRadius
         addSubview(searchButton)
         
     }
     
     func setupResultTable() {
+        resultTable = UITableView.newAutoLayout()
         resultTable.alpha = tableStartingAlpha
         addSubview(resultTable)
     }
+    /*
     
-    func searchClicked(sender: UIButton!) {
+    */
+    // -Mark: Layout
+    
+    override func updateConstraints() {
+        if !didSetupConstraints {
+            searchBar.autoAlignAxis(toSuperviewAxis: .vertical)
+            searchBar.autoMatch(.width, to: .width, of: self)
+            searchBar.autoPinEdge(toSuperviewEdge: .top)
+            
+            searchButton.autoSetDimension(.height, toSize: searchButtonHeight)
+            searchButton.autoAlignAxis(toSuperviewAxis: .vertical)
+            
+            
+            resultTable.autoAlignAxis(toSuperviewAxis: .vertical)
+            resultTable.autoPinEdge(toSuperviewEdge: .leading)
+            resultTable.autoPinEdge(toSuperviewEdge: .trailing)
+            resultTable.autoPinEdge(toSuperviewEdge: .bottom)
+            resultTable.autoPinEdge(.top, to: .bottom, of: searchBar)
+           
+            
+            didSetupConstraints = true
+        }
+        searchButtonWidthConstraint?.autoRemove()
+        searchButtonEdgeConstraint?.autoRemove()
+        
+        if searchBarTop {
+            searchButtonWidthConstraint = searchButton.autoMatch(.width, to: .width, of: self)
+            searchButtonEdgeConstraint = searchButton.autoPinEdge(toSuperviewEdge: .top)
+        } else {
+            searchButtonWidthConstraint = searchButton.autoSetDimension(.width, toSize: searchButtonWidth)
+            searchButtonEdgeConstraint = searchButton.autoAlignAxis(toSuperviewAxis: .horizontal)
+        }
+        
+        super.updateConstraints()
+    }
+    
+    // Mark - User Interaction
+    
+    @objc func searchClicked(_ sender: UIButton!) {
         showSearchBar(searchBar: searchBar)
     }
+    
+    
     
     private var searchBarTop = false
     
@@ -83,24 +147,36 @@ class MainView_New: UIView {
                 searchBar.alpha = self.searchBarEndingAlpha
                 self.resultTable.alpha = self.tableEndingAlpha
                 self.searchButton.alpha = self.searchButtonEndingAlpha
+                self.searchButton.layer.cornerRadius = self.searchButtonEndingCornerRadius
             }
             )
         }
         )
     }
     
-    override func updateConstraints() {
     
+    
+    
+    func dismissSearchBar(searchBar: UISearchBar) {
+        searchBarTop = false
         
-        super.updateConstraints()
+        UIView.animate(withDuration: 0.2, animations: {
+            searchBar.alpha = self.searchBarStartingAlpha
+            self.resultTable.alpha = self.tableStartingAlpha
+            self.searchButton.alpha = self.searchButtonStartingAlpha
+            self.searchButton.layer.cornerRadius = self.searchButtonStartingCornerRadius
+        }, completion: { finished in
+            self.setNeedsUpdateConstraints()
+            self.updateConstraintsIfNeeded()
+            UIView.animate(withDuration: 0.3, animations: {
+                searchBar.resignFirstResponder()
+                self.layoutIfNeeded()
+            }
+            )
+        }
+        )
     }
-    
-    
-    
-    
-    
-    
-    
+
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -110,4 +186,11 @@ class MainView_New: UIView {
     }
     */
 
+}
+
+extension MainView_New: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        dismissSearchBar(searchBar: searchBar)
+    }
 }
